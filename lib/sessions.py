@@ -90,7 +90,7 @@ class LilCookies:
     def cookies(self):
         """A dictionary of Cookie.Morsel objects."""
         if not hasattr(self, "_cookies"):
-            self._cookies = Cookie.BaseCookie()
+            self._cookies = Cookie.SimpleCookie()
             if "Cookie" in self.request.headers:
                 try:
                     self._cookies.load(self.request.headers["Cookie"])

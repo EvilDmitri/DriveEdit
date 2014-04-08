@@ -6,7 +6,7 @@ function UserCtrl($scope, backend) {
         backend.user().then(function (response) {
             $scope.user = response.data;
         });
-    }
+    };
     $scope.login();
 }
 
